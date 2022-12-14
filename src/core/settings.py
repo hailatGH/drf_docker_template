@@ -80,24 +80,24 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': "zemadatabase",
-        'USER': "zemadatabaseadmin",
-        'PASSWORD': "StrongP@ssword",
-        'HOST': "zema-postgresql-v100.postgres.database.azure.com",
-        'PORT': '5432',
-        'OPTIONS': {'sslmode': 'disable'}
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': "zemadatabase",
+#         'USER': "zemadatabaseadmin",
+#         'PASSWORD': "StrongP@ssword",
+#         'HOST': "zema-postgresql-v100.postgres.database.azure.com",
+#         'PORT': '5432',
+#         'OPTIONS': {'sslmode': 'disable'}
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
@@ -140,12 +140,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 MEDIA_URL = 'Media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
-# STATICFILES_STORAGE = 'core.custom_azure.AzureStaticStorage'
-# STATIC_LOCATION = "zemastaticcontainer"
-# AZURE_ACCOUNT_NAME = "zemastroragev100"
-# AZURE_CUSTOM_DOMAIN = f'{AZURE_ACCOUNT_NAME}.blob.core.windows.net'
-# STATIC_URL = f'https://{AZURE_CUSTOM_DOMAIN}/{STATIC_LOCATION}/'
-
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
@@ -182,3 +176,25 @@ CORS_ALLOW_HEADERS = [
     "x-csrftoken",
     "x-requested-with",
 ]
+
+
+# Azure Blog Conf
+# https://zemastroragev100.blob.core.windows.net/
+
+# DEFAULT_FILE_STORAGE = 'storages.backends.azure_storage.AzureStorage'
+# STATICFILES_STORAGE = 'storages.backends.azure_storage.AzureStorage'
+# AZURE_ACCOUNT_NAME = 'zemastroragev100'
+# AZURE_ACCOUNT_KEY = 'AFsY2hZVbyYBKisEkRL+toNNJ7yBOzoJ/cruOxurFHnU84vE+Cmloq9S2ZkCxYaxrM5QemPsUiX5+ASt4WEg8w=='
+# AZURE_CONTAINER = 'zemacontainer'
+# AZURE_SSL = False
+# AZURE_UPLOAD_MAX_CONN = 20
+# AZURE_URL_EXPIRATION_SECS = None
+# AZURE_LOCATION =
+# AZURE_CUSTOM_DOMAIN =
+STATICFILES_STORAGE = 'core.custom_azure.AzureStaticStorage'
+
+STATIC_LOCATION = "zemacontainer"
+
+AZURE_ACCOUNT_NAME = "zemastroragev100"
+AZURE_CUSTOM_DOMAIN = f'{AZURE_ACCOUNT_NAME}.blob.core.windows.net'
+STATIC_URL = f'https://{AZURE_CUSTOM_DOMAIN}/{STATIC_LOCATION}/'
