@@ -40,7 +40,6 @@ INSTALLED_APPS = [
 
     'rest_framework',
     'storages',
-    'azure',
 
     'core',
     'player',
