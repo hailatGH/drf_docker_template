@@ -1,4 +1,5 @@
 venv
+.dockerignore
 
 
 # Byte-compiled / optimized / DLL files
