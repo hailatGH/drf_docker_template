@@ -3,6 +3,7 @@ venv
 src/core/__pycache__
 src/player/__pycache__
 src/db.sqlite3
+src/static
 
 
 # Byte-compiled / optimized / DLL files

@@ -215,7 +215,7 @@ CORS_ALLOW_HEADERS = [
 
 # Final Try
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, '/static/'),
+    os.path.join(BASE_DIR, 'static/'),
 ]
 
 AZURE_ACCOUNT_NAME = 'zemastroragev100'
