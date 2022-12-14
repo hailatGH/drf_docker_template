@@ -181,8 +181,8 @@ CORS_ALLOW_HEADERS = [
 # Azure Blog Conf
 # https://zemastroragev100.blob.core.windows.net/
 
-# DEFAULT_FILE_STORAGE = 'storages.backends.azure_storage.AzureStorage'
-# STATICFILES_STORAGE = 'storages.backends.azure_storage.AzureStorage'
+DEFAULT_FILE_STORAGE = 'storages.backends.azure_storage.AzureStorage'
+STATICFILES_STORAGE = 'storages.backends.azure_storage.AzureStorage'
 # AZURE_ACCOUNT_NAME = 'zemastroragev100'
 # AZURE_ACCOUNT_KEY = 'AFsY2hZVbyYBKisEkRL+toNNJ7yBOzoJ/cruOxurFHnU84vE+Cmloq9S2ZkCxYaxrM5QemPsUiX5+ASt4WEg8w=='
 # AZURE_CONTAINER = 'zemacontainer'
@@ -193,7 +193,7 @@ CORS_ALLOW_HEADERS = [
 # AZURE_CUSTOM_DOMAIN =
 # STATICFILES_STORAGE = 'core.custom_azure.AzureStaticStorage'
 
-# STATIC_LOCATION = "zemacontainer"
+STATIC_LOCATION = "zemacontainer"
 
 # AZURE_ACCOUNT_NAME = "zemastroragev100"
 # AZURE_CUSTOM_DOMAIN = f'{AZURE_ACCOUNT_NAME}.blob.core.windows.net'
