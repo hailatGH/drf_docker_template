@@ -32,4 +32,4 @@ class TestViewset(viewsets.ModelViewSet):
     # permission_classes = [permissions.IsAuthenticated]
 
     def list(self, request, *args, **kwargs):
-        return Response("Working Fine")
+        return Response("Working Fine Double Check")
