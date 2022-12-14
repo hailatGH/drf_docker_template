@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'rest_framework',
+    'storages',
 
     'core',
     'player',
@@ -132,14 +133,23 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
+# DEFAULT_FILE_STORAGE = 'storages.backends.azure_storage.AzureStorage'
+# STATICFILES_STORAGE = 'custom_storage.custom_azure.PublicAzureStorage'
 
-# STATICFILES_STORAGE = 'zemastroragev100.blob.core.windows.net/'
+STATICFILES_STORAGE = 'core.custom_azure.AzureStaticStorage'
 
-STATIC_URL = 'static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+STATIC_LOCATION = "zemastaticcontainer"
 
-MEDIA_URL = 'Media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+AZURE_ACCOUNT_NAME = "zemastroragev100"
+AZURE_CUSTOM_DOMAIN = f'{AZURE_ACCOUNT_NAME}.blob.core.windows.net'
+STATIC_URL = f'https://{AZURE_CUSTOM_DOMAIN}/{STATIC_LOCATION}/'
+
+
+# STATIC_URL = 'static/'
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+
+# MEDIA_URL = 'Media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
