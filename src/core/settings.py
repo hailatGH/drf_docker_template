@@ -138,6 +138,8 @@ REST_FRAMEWORK = {
         'rest_framework.renderers.BrowsableAPIRenderer'
     ],
 }
+CSRF_TRUSTED_ORIGINS = [
+    "https://drf-docker-template-ca.calmgrass-743c6f7f.francecentral.azurecontainerapps.io"]
 
 CORS_ALLOW_ALL_ORIGINS = True
 
