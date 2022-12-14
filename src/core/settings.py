@@ -208,5 +208,6 @@ STATICFILES_STORAGE = 'core.custom_azure.AzureStaticStorage'
 STATIC_LOCATION = "zemacontainer"
 
 AZURE_ACCOUNT_NAME = "zemastroragev100"
+AZURE_CONTAINER = 'zemacontainer'
 AZURE_CUSTOM_DOMAIN = f'{AZURE_ACCOUNT_NAME}.blob.core.windows.net'
 STATIC_URL = f'https://{AZURE_CUSTOM_DOMAIN}/{STATIC_LOCATION}/'
