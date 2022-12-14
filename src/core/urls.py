@@ -23,11 +23,11 @@ from player.views import *
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'users', UserViewSet)
 router.register(r'groups', GroupViewSet)
-router.register(r'test', TestViewset)
-router.register(r'test7', Test2Viewset)
+router.register(r'artist', ArtistsWebViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+# + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

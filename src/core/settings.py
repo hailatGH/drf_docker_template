@@ -141,7 +141,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
-MEDIA_URL = 'Media/'
+MEDIA_URL = 'media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 # Default primary key field type
@@ -181,43 +181,11 @@ CORS_ALLOW_HEADERS = [
     "x-requested-with",
 ]
 
-
-# Azure Blog Conf
-# https://zemastroragev100.blob.core.windows.net/
-
-# DEFAULT_FILE_STORAGE = 'storages.backends.azure_storage.AzureStorage'
-# STATICFILES_STORAGE = 'storages.backends.azure_storage.AzureStorage'
-
-# AZURE_ACCOUNT_NAME = 'zemastroragev100'
-# AZURE_ACCOUNT_KEY = 'AFsY2hZVbyYBKisEkRL+toNNJ7yBOzoJ/cruOxurFHnU84vE+Cmloq9S2ZkCxYaxrM5QemPsUiX5+ASt4WEg8w=='
-# AZURE_URL_EXPIRATION_SECS = None
-# AZURE_CONTAINER = 'zemacontainer'
-# AZURE_SSL = False
-# # AZURE_CONNECTION_TIMEOUT_SECS = 600
-# AZURE_CUSTOM_DOMAIN = f'{AZURE_ACCOUNT_NAME}.blob.core.windows.net'
-
-# STATIC_LOCATION = "zemacontainer"
-# STATIC_URL = f'https://{AZURE_CUSTOM_DOMAIN}/{STATIC_LOCATION}/'
-# STATIC_ROOT = os.path.join(
-#     BASE_DIR, f'https://{AZURE_CUSTOM_DOMAIN}/{STATIC_LOCATION}/')
-
-# AZURE_CONNECTION_STRING = "DefaultEndpointsProtocol=https;AccountName=zemastroragev100;AccountKey=AFsY2hZVbyYBKisEkRL+toNNJ7yBOzoJ/cruOxurFHnU84vE+Cmloq9S2ZkCxYaxrM5QemPsUiX5+ASt4WEg8w==;BlobEndpoint=https://zemastroragev100.blob.core.windows.net/;FileEndpoint=https://zemastroragev100.file.core.windows.net/;TableEndpoint=https://zemastroragev100.table.core.windows.net/;QueueEndpoint=https://zemastroragev100.queue.core.windows.net/"
-
-# STATICFILES_STORAGE = 'core.custom_azure.AzureStaticStorage'
-
-# STATIC_LOCATION = "zemacontainer"
-
-# AZURE_ACCOUNT_NAME = "zemastroragev100"
-# AZURE_CONTAINER = 'zemacontainer'
-# AZURE_CUSTOM_DOMAIN = f'{AZURE_ACCOUNT_NAME}.blob.core.windows.net'
-# STATIC_URL = f'https://{AZURE_CUSTOM_DOMAIN}/{STATIC_LOCATION}/'
-
-
 # Final Try
+
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, '/static/'),
 ]
-
 AZURE_ACCOUNT_NAME = 'zemastroragev100'
 AZURE_ACCOUNT_KEY = 'AFsY2hZVbyYBKisEkRL+toNNJ7yBOzoJ/cruOxurFHnU84vE+Cmloq9S2ZkCxYaxrM5QemPsUiX5+ASt4WEg8w=='
 AZURE_CUSTOM_DOMAIN = f'{AZURE_ACCOUNT_NAME}.blob.core.windows.net'

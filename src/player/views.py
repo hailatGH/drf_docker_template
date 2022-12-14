@@ -4,44 +4,22 @@ from rest_framework import permissions
 from rest_framework.response import Response
 from .serializers import UserSerializer, GroupSerializer
 
+from .models import *
+
 
 class UserViewSet(viewsets.ModelViewSet):
-    """
-    API endpoint that allows users to be viewed or edited.
-    """
+
     queryset = User.objects.all().order_by('-date_joined')
     serializer_class = UserSerializer
-    # permission_classes = [permissions.IsAuthenticated]
 
 
 class GroupViewSet(viewsets.ModelViewSet):
-    """
-    API endpoint that allows groups to be viewed or edited.
-    """
+
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
-    # permission_classes = [permissions.IsAuthenticated]
 
 
-class TestViewset(viewsets.ModelViewSet):
-    """
-    API endpoint that allows groups to be viewed or edited.
-    """
-    queryset = User.objects.all()
-    serializer_class = UserSerializer
-    # permission_classes = [permissions.IsAuthenticated]
+class ArtistsWebViewSet(viewsets.ModelViewSet):
 
-    def list(self, request, *args, **kwargs):
-        return Response("Working Fine Double Check")
-
-
-class Test2Viewset(viewsets.ModelViewSet):
-    """
-    API endpoint that allows groups to be viewed or edited.
-    """
-    queryset = User.objects.all()
-    serializer_class = UserSerializer
-    # permission_classes = [permissions.IsAuthenticated]
-
-    def list(self, request, *args, **kwargs):
-        return Response("Double Check Database Connection")
+    queryset = ArtistsModel.objects.all()
+    serializer_class = ArtistsSerializer
