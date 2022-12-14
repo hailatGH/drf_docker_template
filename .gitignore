@@ -1,5 +1,8 @@
 venv
 .dockerignore
+src/core/__pycache__
+src/player/__pycache__
+src/db.sqlite3
 
 
 # Byte-compiled / optimized / DLL files

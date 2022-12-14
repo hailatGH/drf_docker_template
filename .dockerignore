@@ -1,2 +1,5 @@
 .gitignore
 venv
+src/core/__pycache__
+src/player/__pycache__
+src/db.sqlite3
