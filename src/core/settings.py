@@ -187,10 +187,10 @@ CORS_ALLOW_HEADERS = [
 
 DEFAULT_FILE_STORAGE = 'storages.backends.azure_storage.AzureStorage'
 STATICFILES_STORAGE = 'storages.backends.azure_storage.AzureStorage'
-# AZURE_ACCOUNT_NAME = 'zemastroragev100'
-# AZURE_ACCOUNT_KEY = 'AFsY2hZVbyYBKisEkRL+toNNJ7yBOzoJ/cruOxurFHnU84vE+Cmloq9S2ZkCxYaxrM5QemPsUiX5+ASt4WEg8w=='
-# AZURE_CONTAINER = 'zemacontainer'
-# AZURE_SSL = False
+AZURE_ACCOUNT_NAME = 'zemastroragev100'
+AZURE_ACCOUNT_KEY = 'AFsY2hZVbyYBKisEkRL+toNNJ7yBOzoJ/cruOxurFHnU84vE+Cmloq9S2ZkCxYaxrM5QemPsUiX5+ASt4WEg8w=='
+AZURE_CONTAINER = 'zemacontainer'
+AZURE_SSL = False
 # AZURE_UPLOAD_MAX_CONN = 20
 # AZURE_URL_EXPIRATION_SECS = None
 # AZURE_LOCATION =
