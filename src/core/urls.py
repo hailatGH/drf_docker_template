@@ -21,6 +21,7 @@ from player.views import *
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'users', UserViewSet)
 router.register(r'groups', GroupViewSet)
+router.register(r'test', TestViewset)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
