@@ -44,4 +44,4 @@ class Test2Viewset(viewsets.ModelViewSet):
     # permission_classes = [permissions.IsAuthenticated]
 
     def list(self, request, *args, **kwargs):
-        return Response("Double Check")
+        return Response("Double Check Database Connection")

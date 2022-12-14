@@ -98,18 +98,6 @@ DATABASES = {
     }
 }
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'zemadatabase',
-#         'HOST': "zema-postgresql-v100.postgres.database.azure.com",
-#         'USER': "zemadatabaseadmin",
-#         'PASSWORD': "StrongP@ssword",
-#     }
-# }
-
-# DATABASES = {'default': 'postgres://zemadatabaseadmin:StrongP@ssword@zema-postgresql-v100.postgres.database.azure.com/zema-postgresql-v100'}
-
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
