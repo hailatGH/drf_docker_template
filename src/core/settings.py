@@ -132,7 +132,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 
-STATICFILES_STORAGE = 'https://zemastroragev100.blob.core.windows.net/'
+STATICFILES_STORAGE = 'zemastroragev100.blob.core.windows.net/'
 
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
