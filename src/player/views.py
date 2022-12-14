@@ -33,3 +33,15 @@ class TestViewset(viewsets.ModelViewSet):
 
     def list(self, request, *args, **kwargs):
         return Response("Working Fine Double Check")
+
+
+class Test2Viewset(viewsets.ModelViewSet):
+    """
+    API endpoint that allows groups to be viewed or edited.
+    """
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+    # permission_classes = [permissions.IsAuthenticated]
+
+    def list(self, request, *args, **kwargs):
+        return Response("Double Check")
