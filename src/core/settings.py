@@ -79,21 +79,21 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'zemadatabase',
-        'HOST': "zema-postgresql-v100.postgres.database.azure.com",
-        'USER': "zemadatabaseadmin",
-        'PASSWORD': "StrongP@ssword",
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'zemadatabase',
+#         'HOST': "zema-postgresql-v100.postgres.database.azure.com",
+#         'USER': "zemadatabaseadmin",
+#         'PASSWORD': "StrongP@ssword",
+#     }
+# }
 
 # DATABASES = {'default': 'postgres://zemadatabaseadmin:StrongP@ssword@zema-postgresql-v100.postgres.database.azure.com/zema-postgresql-v100'}
 
